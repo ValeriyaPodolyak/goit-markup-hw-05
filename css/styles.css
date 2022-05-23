@@ -631,46 +631,27 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
 /* Overlay */
 .overlay {
-    position: relative;
-        overflow: hidden;
+ position: relative;
+overflow: hidden;
 }
 .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
 font-weight: 400;
 font-size: 18px;
 line-height: 28px;
 letter-spacing: 0.03em;
 color: #FFFFFF;
-    width: 322px;
-height: 168px;
-}
-.overlay-text-div {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+padding: 63px 24px;
+background-color:rgba(33, 150, 243, 0.9);
 opacity: 0;
-}
-.overlay-portfolio:hover .overlay-text-div,
-.overlay-portfolio:focus .overlay-text-div {
-    opacity: 1;
-}
-.overlay::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(33, 150, 243, 0.9); 
-    /* opacity: 0; */
-    transform: translateY(100%);
+transform: translateY(100%);
     transition: transform 250ms var(--cubic);
 }
-.overlay:hover::before,
-.overlay:focus::before {
-opacity: 1;
+.overlay-portfolio:hover .overlay-text,
+.overlay-portfolio:focus .overlay-text {
+    opacity: 1;
+transform: translateY(0);
 }
-.overlay-portfolio:hover .overlay::before {
-    transform: translateX(0);
-}
+
